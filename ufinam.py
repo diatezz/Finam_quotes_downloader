@@ -19,7 +19,6 @@ def getfinamdata(symbol, period, start_date_str, end_date_str):
     s_code = finam_symbols[2]
     s_market = finam_symbols[3]
 
-
     ids = s_id[s_id.find('[') + 1:s_id.find(']')].split(',')
     codes = s_code[s_code.find('[\'') + 1:s_code.find('\']')].split('\',\'')
     markets = s_market[s_market.find('[') + 1:s_market.find(']')].split(',')
