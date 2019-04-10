@@ -1,4 +1,3 @@
-#!/usr/bin/env python27
 # -*- coding: utf-8 -*-
 
 """
@@ -31,8 +30,7 @@ def getfinamdata(symbol, period, start_date_str, end_date_str):
     if not res:
         raise Exception("%s not found." % symbol)
 
-    periods = {'tick': 1, 'min': 2, '5min': 3, '10min': 4, '15min': 5, '30min': 6, 'hour': 7, 'daily': 8, 'week': 9,
-               'month': 10}
+    periods = {'tick': 1, 'min': 2, '5min': 3, '10min': 4, '15min': 5, '30min': 6, 'hour': 7, 'daily': 8, 'week': 9, 'month': 10}
     finam_url = "http://export.finam.ru/table.csv?"
     market = res[0][2]
     start_date = datetime.strptime(start_date_str, "%d.%m.%Y").date()
